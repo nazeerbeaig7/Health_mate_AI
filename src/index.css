@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-page-gradient;
+  font-family: 'Poppins', sans-serif;
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 border border-gray-200;
+    background: linear-gradient(120deg, theme('colors.glass-start'), theme('colors.glass-end'));
+  }
+}
