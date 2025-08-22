@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Medical Chatbot</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+    }
+    .Navbar{
+      color: #2563EB;
+    }
+    .hero {
+      background: linear-gradient(135deg, #2563EB, #10B981);
+      color: white;
+      padding: 80px 0;
+    }
+    .feature-card {
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;OPENAI_API_KEY=your_openai_key_here
+
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+    .cta {
+      background: #2563EB;
+      color: rgb(255, 255, 255);
+      padding: 60px 20px;
+      border-radius: 15px;
+    }
+    .btn-cta {
+      background: #10B981;
+      border: none;
+    }
+    .btn-cta:hover {
+      background: #0f9a6e;
+    }
+  .article-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .article-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  }
+  .card-img-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  .card-img-wrapper img {
+    width: 100%;
+    display: block;
+  }
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    color: #fff;
+  }
+  .overlay-title {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+      <img src="Doctor_Health_Care_Logo-removebg-preview.png" alt="Logo" style="height: 60px; width: 100px;" >
+      <a class="navbar-brand fw-bold text-primary " href="#">HEALTHMATE AI</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+
+        </ul>
+    
+        <a href="#" class="btn btn-success ms-3">Profile</a>
+        
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero text-center">
+    <div class="container">
+      <h1 class="fw-bold display-4">Your AI Health Assistant</h1>
+      <p class="lead">Get instant answers to health queries & never miss a medication again.</p>
+      <div class="mt-4">
+        <a href="#" class="btn btn-light btn-lg me-2">Start Chatting</a>
+        <a href="#" class="btn btn-cta btn-lg">Set Reminders</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4">Features</h2>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="card feature-card p-3">
+            <h5>💬 Ask Health Queries</h5>
+            <p>Instant AI-powered answers to common health issues.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card feature-card p-3">
+            <h5>💊 Medication Reminders</h5>
+            <p>Smart alerts so you never skip a dose.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card feature-card p-3">
+            <h5>🌿 Health Tips</h5>
+            <p>Daily wellness & lifestyle suggestions.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card feature-card p-3">
+            <h5>🚨 Emergency Help</h5>
+            <p>Quick access to hospitals & SOS numbers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4">How It Works</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="p-4 bg-white shadow-sm rounded">
+            <h3>1️⃣</h3>
+            <p>Type or Speak your query</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-white shadow-sm rounded">
+            <h3>2️⃣</h3>
+            <p>Get instant health advice</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-white shadow-sm rounded">
+            <h3>3️⃣</h3>
+            <p>Receive timely medication reminders</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta text-center my-5 container">
+    <h2 class="fw-bold">Take control of your health today 🚀</h2>
+    <p class="mb-4">Your trusted AI health companion, always here to help.</p>
+    <a href="#" class="btn btn-light btn-lg">Start Using for Free</a>
+  </section>
+
+               
+
+  <!-- Recent Articles Section (Carousel) -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5">Recent Articles</h2>
+
+    <div id="articlesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm border-0 article-card">
+                <div class="card-img-wrapper">
+                  <img src="31ba31b5-3a26-493c-ad62-ac52566c0dfe.png" class="card-img-top" alt="Healthy Living" loading="lazy">
+                  <div class="overlay">
+                    <h5 class="overlay-title">10 Tips for a Healthy Lifestyle</h5>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Discover simple daily habits that can improve your overall wellness and energy.</p>
+                  <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm border-0 article-card">
+                <div class="card-img-wrapper">
+                  <img src="c62c37cf-cc14-46a7-8912-52e71a8008d3.png" class="card-img-top" alt="Medication Reminders" loading="lazy">
+                  <div class="overlay">
+                    <h5 class="overlay-title">Why Medication Reminders Matter</h5>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Learn how smart reminders help patients stay consistent with treatments.</p>
+                  <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm border-0 article-card">
+                <div class="card-img-wrapper">
+                  <img src="42c7d909-e07b-493e-bc97-1563f6ff10a8.png" class="card-img-top" alt="AI in Healthcare" loading="lazy">
+                  <div class="overlay">
+                    <h5 class="overlay-title">How AI is Transforming Healthcare</h5>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">From chatbots to diagnostics, AI is reshaping the way patients receive care.</p>
+                  <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm border-0 article-card">
+                <div class="card-img-wrapper">
+                  <img src="79cf33fb-d068-46c9-8be4-a34e15d05e99.png" class="card-img-top" alt="Nutrition" loading="lazy">
+                  <div class="overlay">
+                    <h5 class="overlay-title">A Beginner’s Guide to Nutrition</h5>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Learn what your body really needs for long-term health.</p>
+                  <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm border-0 article-card">
+                <div class="card-img-wrapper">
+                  <img src="317a4fdd-4b92-401f-9578-3065479b1492.png" class="card-img-top" alt="Mental Wellness" loading="lazy">
+                  <div class="overlay">
+                    <h5 class="overlay-title">Mental Wellness Practices</h5>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Practical ways to reduce stress and maintain balance daily.</p>
+                  <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm border-0 article-card">
+                <div class="card-img-wrapper">
+                  <img src="9bee2ba9-daad-4548-94d8-6a5db3b5cb93.png" class="card-img-top" alt="Fitness" loading="lazy">
+                  <div class="overlay">
+                    <h5 class="overlay-title">5 Simple At-Home Workouts</h5>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">No gym needed! Stay active with easy daily exercises.</p>
+                  <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#articlesCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#articlesCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+
+      <!-- Indicators (dots) -->
+      <div class="carousel-indicators mt-3">
+        <button type="button" data-bs-target="#articlesCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#articlesCarousel" data-bs-slide-to="1"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center p-4">
+    <p>© 2025 HEALTHMATE AI | Your trusted AI health companion</p>
+    <div>
+      <a href="#" class="text-white me-3">Privacy</a>
+      <a href="#" class="text-white me-3">Terms</a>
+      <a href="#" class="text-white">Contact</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>     
