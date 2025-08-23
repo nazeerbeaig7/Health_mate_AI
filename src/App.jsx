@@ -1,31 +1,34 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React, { Suspense } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Dashboard from './pages/Dashboard';
-import HealthTools from './pages/HealthTools';
-import Profile from './pages/Profile';
-import Appointments from './pages/Appointments';
-import Connect from './pages/Connect';
-import Settings from './pages/Settings';
+import { useAuth } from './contexts/AuthContext';
+import AppRouter from './routes/AppRouter';
+
+// Simple loading component
+const LoadingFallback = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+  </div>
+);
 
 function App() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Navbar />
+  const { currentUser, loading } = useAuth();
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/health-tools" element={<HealthTools />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/appointments" element={<Appointments />} />
-          <Route path="/connect" element={<Connect />} />
-          <Route path="/settings" element={<Settings />} />
-        </Routes>
-      </main>
-    </div>
+  if (loading) {
+    return <LoadingFallback />;
+  }
+
+  return (
+    <BrowserRouter>
+      <div className="min-h-screen bg-gray-50 flex flex-col">
+        <Navbar />
+        <main className="flex-grow pt-16"> {/* Add padding-top to account for fixed navbar */}
+          <Suspense fallback={<LoadingFallback />}>
+            <AppRouter />
+          </Suspense>
+        </main>
+      </div>
+    </BrowserRouter>
   );
 }
 
